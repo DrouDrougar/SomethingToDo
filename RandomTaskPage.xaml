@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SomethingToDoApp.RandomTaskPage"
+             Title="Random Task">
+    <VerticalStackLayout Padding="30,0" Spacing="25">
+        <Label 
+            FontSize="Large"
+            Text="This is your Chosen Task"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+
+        <Label x:Name="NameLabel" Text="{Binding Name}" HorizontalTextAlignment="Center" FontAttributes="Bold" FontSize="Large"/>
+        <Label Text="Task Description" FontAttributes="Bold" FontSize="Large" HorizontalTextAlignment="Center"/>
+
+        <Label x:Name="DescriptionLabel" Text="{Binding Description}" HorizontalTextAlignment="Center" FontSize="Medium"/>
+        
+    </VerticalStackLayout>
+</ContentPage>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SomethingToDoApp.TaskAddPage"
+             Title="TaskAddPage">
+
+    <FlexLayout Direction="Column" >
+
+        <VerticalStackLayout Padding="30,0" Spacing="25">
+            
+            <Entry x:Name="AddTaskNameField" Placeholder="Task Name" />
+            <Entry x:Name="AddTaskDescriptionField" Placeholder="Task Description" />
+            <Button x:Name="SaveButton" Text="Save Task" Clicked="AddButton_Clicked" Padding="5"/>
+            
+            <Button x:Name="ViewAllTasksButton" Text="View All Tasks" Clicked="ViewAllTasksButton_Clicked" Padding="5"/>
+
+        <ListView
+            x:Name="listView" FlexLayout.Grow="1" HasUnevenRows="True" IsVisible="False" ItemTapped="listView_ItemTapped_1">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <VerticalStackLayout Padding="5">
+                            <Label Text="{Binding TaskName}" />
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto" />
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="auto" />
+                                </Grid.ColumnDefinitions>
+                                <Label Grid.Column="0" Text="{Binding TaskDescription}" />
+                            </Grid>
+                        </VerticalStackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+            
+        </ListView>
+    </VerticalStackLayout>
+    </FlexLayout>
+</ContentPage>
