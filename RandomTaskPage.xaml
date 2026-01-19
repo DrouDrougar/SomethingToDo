@@ -4,16 +4,26 @@
              x:Class="SomethingToDoApp.RandomTaskPage"
              Title="Random Task">
     <VerticalStackLayout Padding="30,0" Spacing="25">
-        <Label 
+        <Grid RowSpacing="12" ColumnSpacing="12" RowDefinitions="*, *, *, *" ColumnDefinitions="*">
+            <!--<Label 
+            Grid.Column="1"
+            Grid.Row="0"
             FontSize="Large"
-            Text="This is your Chosen Task"
+            Text="Your Chosen Task is:"
             VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+            HorizontalOptions="Center" />-->
 
-        <Label x:Name="NameLabel" Text="{Binding Name}" HorizontalTextAlignment="Center" FontAttributes="Bold" FontSize="Large"/>
-        <Label Text="Task Description" FontAttributes="Bold" FontSize="Large" HorizontalTextAlignment="Center"/>
 
-        <Label x:Name="DescriptionLabel" Text="{Binding Description}" HorizontalTextAlignment="Center" FontSize="Medium"/>
+            <Label Grid.Column="1" Grid.Row="1" x:Name="NameLabel" Text="{Binding Name}" HorizontalTextAlignment="Center" FontAttributes="Bold" FontSize="Large"/>
+
+            <Label Grid.Column="1" Grid.Row="2"  Text="Task Description" FontAttributes="Bold" FontSize="Medium" HorizontalTextAlignment="Center"/>
+
+            <Label Grid.Column="1" Grid.Row="3" x:Name="DescriptionLabel" Text="{Binding Description}" HorizontalTextAlignment="Center" FontSize="Small"/>
+
+        </Grid>
+
+
+
         
     </VerticalStackLayout>
 </ContentPage>

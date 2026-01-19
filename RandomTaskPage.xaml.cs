@@ -1,7 +1,6 @@
 
-using SomethingToDoApp.Models;
 using SomethingToDoApp.Sqlite;
-using System.Xml;
+
 
 namespace SomethingToDoApp;
 
